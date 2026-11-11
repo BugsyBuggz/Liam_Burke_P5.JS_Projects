@@ -1,7 +1,131 @@
+let = c1; let = c2; let = c3;
+
 function setup() {
   createCanvas(400, 400);
+  
+  // Pink
+  c1 = color(255, 0, 190);
+
+  // Orange
+  c2 = color(255,150,0);
+
+  // Yellow
+  c3 = color(255,210,0);
 }
 
 function draw() {
-  background(220);
+  // Fills the background with the color yellow
+  background(140, 237, 237);
+  
+  for (let i=0; i<=width; i++) {
+    let amt = map(i, 0, width, 0, 1);
+    let c2 = lerpColor(c1, c3, amt);
+
+    stroke(c2)
+    line(i, 0, i, height)
+  }
+}
+  // Draws pink rectangle in sunset
+  noStroke();
+  fill(c1);
+  rect(0,0,400,80);
+  
+  // Draws orange rectangle in sunset
+  fill(c2);
+  rect(0,80,400,80);
+
+  // Draws yellow rectangle at base of mountains
+  fill(c3);
+  rect(0,160,400,50);
+
+  // Draws the sun in the center, behind the mountains
+  noStroke();
+  fill(255,255,190);
+  circle(200,170,120);
+  
+  // Draws light blue mountain at the base of the sun
+  fill(0,100,200);
+  triangle(150,250,240,180,340,250);
+
+  // Draws farthest left mountain
+  fill(0,50,100);
+  triangle(-30,250,60,170,150,250);
+
+  // Draws mountain, second one from the right
+  fill(0,50,100);
+  triangle(220,250,300,170,360,250);
+
+  // Draws biggest mountain, second from the left
+  fill(0,30,100);
+  triangle(50,250,136,145,250,250);
+
+  // Draws farthest right mountain
+  fill(0,30,100);
+  triangle(300,250,380,150,430,250);
+
+  // Draws top right part of landscape "Hill"
+  stroke(1);
+  strokeWeight(1);
+  fill(0,100,0);
+  ellipse(300,320,400,200);
+
+  // Draws top left part of landscape "Hill"
+  stroke(0);
+  strokeWeight(1);
+  fill(0,90,0);
+  ellipse(50,330,400,200);
+
+  // Draws bottom right part of landscape
+  stroke(0);
+  strokeWeight(1);
+  fill(0,70,0);
+  ellipse(300,450,450,300);
+
+  // Draws bottom left part of landscape
+  stroke(0);
+  strokeWeight(1);
+  fill(0,50,0);
+  ellipse(0,480,450,300);
+
+  // Draws pond in front
+  noStroke();
+  fill(0,100,200);
+  ellipse(350,420,400,100);
+  
+  // Draws left tree trunk
+  stroke(165, 42, 42);
+  strokeWeight(4);
+  color(77,51,26);
+  line(80,245,80,300);
+
+  // Draws left tree
+  noStroke();
+  fill(255,210,0);
+  triangle(62,269,80,200,100,269);
+
+  // Draws middle tree trunk
+  stroke(165, 42, 42);
+  strokeWeight(6);
+  color(255,255,255);
+  line(175,245,175,320);
+  
+  // Draws middle tree
+  noStroke();
+  fill(255,220,0);
+  triangle(140,300,180,225,210,300);
+
+  // Draws tree trunk on the right
+  stroke(165, 42, 42);
+  strokeWeight(7);
+  color(255,255,255);
+  line(310,280,310,360);
+  
+  // Draws right tree
+  noStroke();
+  fill(255,240,0);
+  triangle(275,325,310,260,350,325);
+
+  fill(0);
+  text(mouseX, 10, 10);
+  text(mouseY, 10, 20);
 }

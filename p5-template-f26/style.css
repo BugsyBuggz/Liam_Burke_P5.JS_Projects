@@ -1,7 +1,12 @@
 html, body {
-  margin: 5;
+  margin: 0;
   padding: 0;
 }
 canvas {
   display: block;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
 }

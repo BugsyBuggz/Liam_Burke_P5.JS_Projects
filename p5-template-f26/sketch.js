@@ -1,7 +1,12 @@
-let = c1; let = c2; let = c3;
+let = c1; 
+let = c2; 
+let = c3;
+
+let canvas;
 
 function setup() {
-  createCanvas(400, 400);
+  canvas = createCanvas(400, 400);
+  canvas.parent("sketch-holder");
   
   // Pink
   c1 = color(255, 0, 190);
@@ -19,16 +24,16 @@ function draw() {
   
   for (let i=0; i<=width; i++) {
     let amt = map(i, 0, width, 0, 1);
-    let c2 = lerpColor(c1, c3, amt);
+    c2 = lerpColor(c1, c3, amt);
 
     stroke(c2)
-    line(i, 0, i, height)
+    line(0, i, width, i)
   }
-}
-  // Draws pink rectangle in sunset
+
+// Draws pink rectangle in sunset
   noStroke();
   fill(c1);
-  rect(0,0,400,80);
+  rect(0,0,400,10);
   
   // Draws orange rectangle in sunset
   fill(c2);

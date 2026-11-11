@@ -1,6 +1,6 @@
-let = c1; 
-let = c2; 
-let = c3;
+let c1; 
+let c2; 
+let c3;
 
 let canvas;
 
@@ -30,42 +30,29 @@ function draw() {
     line(0, i, width, i)
   }
 
-// Draws pink rectangle in sunset
-  noStroke();
-  fill(c1);
-  rect(0,0,400,10);
-  
-  // Draws orange rectangle in sunset
-  fill(c2);
-  rect(0,80,400,80);
-
-  // Draws yellow rectangle at base of mountains
-  fill(c3);
-  rect(0,160,400,50);
-
   // Draws the sun in the center, behind the mountains
   noStroke();
   fill(255,255,190);
-  circle(200,170,120);
+  circle(200,190,50);
   
   // Draws light blue mountain at the base of the sun
-  fill(0,100,200);
+  fill(103, 49, 71);
   triangle(150,250,240,180,340,250);
 
   // Draws farthest left mountain
-  fill(0,50,100);
+  fill(48, 25, 52);
   triangle(-30,250,60,170,150,250);
 
   // Draws mountain, second one from the right
-  fill(0,50,100);
+  fill(48, 25, 52);
   triangle(220,250,300,170,360,250);
 
   // Draws biggest mountain, second from the left
   fill(0,30,100);
-  triangle(50,250,136,145,250,250);
+  triangle(50,250,150,156,250,250);
 
   // Draws farthest right mountain
-  fill(0,30,100);
+  fill(106, 90, 205);
   triangle(300,250,380,150,430,250);
 
   // Draws top right part of landscape "Hill"

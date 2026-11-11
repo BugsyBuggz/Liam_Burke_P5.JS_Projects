@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 canvas {
   display: block;
@@ -9,4 +10,10 @@ canvas {
 
 h1 {
   text-align: center;
+  color:white;
+}
+
+p {
+  text-align: center;
+  color: white;
 }

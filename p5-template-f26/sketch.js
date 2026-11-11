@@ -35,6 +35,26 @@ function draw() {
   fill(255,255,190);
   circle(200,190,50);
   
+   // Draws cloud shadow (upper)
+  noStroke();
+  fill(255, 182, 193);
+  ellipse(263,85,300,20);
+
+  // Draws cloud shadow (lower)
+  noStroke();
+  fill(211, 211, 211);
+  ellipse(500,85,200,20);
+  
+  // Draws clouds (top)
+  noStroke();
+  fill(255, 219, 187);
+  ellipse(363,75,400,20);
+
+  // Draws clouds (middle left)
+  noStroke();
+  fill(255, 219, 187);
+  ellipse(363,65,200,20);
+
   // Draws light blue mountain at the base of the sun
   fill(103, 49, 71);
   triangle(150,250,240,180,340,250);
@@ -45,77 +65,83 @@ function draw() {
 
   // Draws mountain, second one from the right
   fill(48, 25, 52);
-  triangle(220,250,300,170,360,250);
+  triangle(220,250,300,170,380,250);
 
   // Draws biggest mountain, second from the left
   fill(0,30,100);
   triangle(50,250,150,156,250,250);
 
   // Draws farthest right mountain
-  fill(106, 90, 205);
-  triangle(300,250,380,150,430,250);
+  fill(0,30,100);
+  triangle(280,250,380,150,480,250);
 
   // Draws top right part of landscape "Hill"
-  stroke(1);
-  strokeWeight(1);
-  fill(0,100,0);
-  ellipse(300,320,400,200);
+  noStroke();
+  fill(40,100,120);
+  ellipse(300,290,400,100);
 
   // Draws top left part of landscape "Hill"
-  stroke(0);
-  strokeWeight(1);
-  fill(0,90,0);
+  noStroke();
+  fill(0,90,100);
   ellipse(50,330,400,200);
 
   // Draws bottom right part of landscape
-  stroke(0);
-  strokeWeight(1);
-  fill(0,70,0);
+  noStroke();
+  fill(40,70,90);
   ellipse(300,450,450,300);
 
   // Draws bottom left part of landscape
-  stroke(0);
-  strokeWeight(1);
-  fill(0,50,0);
+  noStroke();
+  fill(6, 46, 46);
   ellipse(0,480,450,300);
 
-  // Draws pond in front
-  noStroke();
-  fill(0,100,200);
-  ellipse(350,420,400,100);
-  
   // Draws left tree trunk
-  stroke(165, 42, 42);
+  stroke(52, 28, 2);
   strokeWeight(4);
   color(77,51,26);
-  line(80,245,80,300);
+  line(80,245,80,290);
 
-  // Draws left tree
+  // Draws left tree (Bottom)
   noStroke();
-  fill(255,210,0);
+  fill(6, 46, 46);
   triangle(62,269,80,200,100,269);
 
-  // Draws middle tree trunk
-  stroke(165, 42, 42);
-  strokeWeight(6);
-  color(255,255,255);
-  line(175,245,175,320);
-  
-  // Draws middle tree
+  // Draws left tree (Top)
   noStroke();
-  fill(255,220,0);
-  triangle(140,300,180,225,210,300);
+  fill(6, 50, 50);
+  triangle(62,245,80,200,100,245);
+
+  // Draws middle tree trunk
+  stroke(52, 28, 2);
+  strokeWeight(8);
+  color(255,255,255);
+  line(180,245,180,320);
+  
+  // Draws middle tree (Bottom)
+  noStroke();
+  fill(6, 46, 46);
+  triangle(140,300,180,225,220,300);
+
+  // Draws middle tree (Top)
+  noStroke();
+  fill(6, 50, 50);
+  triangle(145,260,180,200,215,260);
 
   // Draws tree trunk on the right
-  stroke(165, 42, 42);
-  strokeWeight(7);
+  stroke(52, 28, 2);
+  strokeWeight(12);
   color(255,255,255);
-  line(310,280,310,360);
-  
-  // Draws right tree
+  line(310,280,310,380);
+
+  // Draws right tree (bottom)
   noStroke();
-  fill(255,240,0);
-  triangle(275,325,310,260,350,325);
+  fill(6, 46, 46);
+  triangle(275,355,310,280,350,355);
+
+   // Draws right tree (top)
+  noStroke();
+  fill(6, 50, 50);
+  triangle(275,315,310,240,350,315);
 
   fill(0);
   text(mouseX, 10, 10);

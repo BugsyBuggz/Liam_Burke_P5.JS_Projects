@@ -16,5 +16,10 @@ h1 {
 p {
   text-align: center;
   color: blanchedalmond;
-  margin-left: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+a {
+  text-align: center;
 }

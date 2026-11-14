@@ -142,8 +142,4 @@ function draw() {
   noStroke();
   fill(6, 50, 50);
   triangle(275,315,310,240,350,315);
-
-  fill(0);
-  text(mouseX, 10, 10);
-  text(mouseY, 10, 20);
 }

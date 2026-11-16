@@ -2,7 +2,7 @@ let soundfile, fft;
 let doDa = false;
 
 async function setup() {
- createCanvas(800, 800);
+ createCanvas(800, 600);
  soundfile = await loadSound('./Assets/mySong.mp3');
  textAlign(CENTER);
  stroke(0);

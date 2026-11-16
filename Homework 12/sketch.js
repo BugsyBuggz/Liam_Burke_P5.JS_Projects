@@ -4,7 +4,7 @@ async function setup() {
  createCanvas(800, 800);
  soundfile = await loadSound('./Assets/mySong.mp3');
  textAlign(CENTER);
- textSize(10);
+ textSize(30);
 
  fft = new p5.FFT();
  soundfile.connect(fft);
@@ -23,11 +23,11 @@ function mousePressed() {
 function draw() {
  background(0);
  
- text('tap to play', width/2, height/2 - 20);
+ text('Click To Jam!', width/2, height/2 - 20);
  let spectrum = fft.analyze();
  
- noStroke();
- fill(0,255,0);
+ stroke(0);
+ fill(15, 255, 80);
 
  for (let i = 0; i < spectrum.length; i++) {
    let x = map(i, 0, spectrum.length, 0, width);     

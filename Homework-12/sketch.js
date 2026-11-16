@@ -1,10 +1,14 @@
 let soundfile, fft; 
+let doDa = false;
 
 async function setup() {
  createCanvas(800, 800);
  soundfile = await loadSound('./Assets/mySong.mp3');
  textAlign(CENTER);
+ stroke(0);
+ fill(15, 255, 80);
  textSize(30);
+ text('Click To Jam!', width/2, height/2 - 20);
 
  fft = new p5.FFT();
  soundfile.connect(fft);
@@ -12,6 +16,7 @@ async function setup() {
 }
 
 function mousePressed() {
+ doDa = true
  if(!soundfile.isPlaying()) {
    soundfile.play();
  }
@@ -21,9 +26,12 @@ function mousePressed() {
 }
 
 function draw() {
+ if (doDa == false) {
+  return;
+ }
+
  background(0);
- 
- text('Click To Jam!', width/2, height/2 - 20);
+
  let spectrum = fft.analyze();
  
  stroke(0);

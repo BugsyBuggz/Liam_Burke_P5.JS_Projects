@@ -7,3 +7,15 @@ canvas {
   display: block;
   margin:auto;
 }
+
+h1 {
+  text-align: center;
+  color:yellowgreen;
+}
+
+p {
+  text-align: center;
+  color:yellow;
+  margin-left: 30%;
+  margin-right: 30%;
+}

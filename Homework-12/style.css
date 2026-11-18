@@ -1,8 +1,17 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
+
+html{
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+body{
   margin: 0;
   padding: 0;
   background-color: black;
 }
+
 canvas {
   display: block;
   margin:auto;
@@ -11,11 +20,30 @@ canvas {
 h1 {
   text-align: center;
   color:yellowgreen;
+  font-family: "Bitcount", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
 }
+
 
 p {
   text-align: center;
   color:yellow;
   margin-left: 25%;
   margin-right: 25%;
+  font-family: "Bitcount", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
 }

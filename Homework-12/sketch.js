@@ -1,10 +1,12 @@
 let soundfile, fft; 
 let doDa = false;
+let myFont
 
 async function setup() {
  createCanvas(800, 450);
- 
  soundfile = await loadSound('./Assets/mySong.mp3');
+ myFont = await loadFont('./Assets/Silkscreen-Regular.ttf')
+  textFont(myFont);
  textAlign(CENTER);
  stroke(0);
  fill(15, 255, 80);
